@@ -1,0 +1,36 @@
+<html>
+    <meta charset="UTF-8">
+    <style>
+        .stl{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: green;
+        }
+        .IMGstl{
+            border: 1px solid red;
+        }
+    </style>
+    <script src="script.js"></script>
+    <body id="ds">
+        <p>Жебит Владислав Олегович</p>
+        <p><a href="https://www.youtube.com">Ютюб</a></p>
+        <p><img src="photo.jpg" style="width: 200px;" id="img"></p><br><br>
+        <button onclick="increaseImageSize()" id="btn">Стили</button><br><br>
+        <button onclick="mod()">Последняя модификация</button>
+
+        <script>
+            function increaseImageSize() {
+                var image = document.getElementById("img");
+                var currentWidth = image.offsetWidth; // текущая ширина
+                var newWidth = currentWidth + 100; // новая ширина, увеличиваем на 100 пикселей
+                image.style.position = "fixed";
+                image.style.top = "0";
+                image.style.right = "0";
+                image.style.width = newWidth + "px";
+                image.addEventListener('click', function() {
+                    image.parentNode.removeChild(image);
+                });
+            }
+        </script>
+        <button onclick="openNewWindow()">Информация</button><br>
+    </body>
+</html>

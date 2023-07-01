@@ -1,0 +1,72 @@
+
+.lal{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+a.knopka {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(56, 183, 212); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+  } 
+  a.knopka:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+  a.knopka:active { background: rgb(152,15,0); } /* при нажатии */
+  .scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+    padding: 10px;
+    padding-right: 3%;
+   }
+   .scale img {
+
+    width: 330px;
+    height: 400px;
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+   .pouring {
+    font-size: 40px;
+    line-height: 50px;
+    font-family: Verdana, sans-serif;
+    font-weight: 900;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
+}
+.pouring:before {
+ 
+    content: '';
+    position: absolute;
+    filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1em, #BFE2FF 1em, #33a8b7 50%), repeating-linear-gradient(45deg, #337AB7, #337AB7 1em, #FFF 1em, #BFE2FF 50%);
+    background-size: 3em 3em, 2em 2em;
+    animation-name: ani;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ani {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@media (max-width:690px) {    
+    .pouring {font-size: 20px;}    
+}

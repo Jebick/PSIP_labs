@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function ADate(){
+                let date = new Date();
+
+                let day = date.getDate();
+                alert(day + " день месяца");
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="ADate()">Показать день</button>
+        <br><br>
+        <script>
+            let surname = "Жебит Владислав";
+            let output = "";
+            for (let i = 0; i < 9; i++) {
+            output += i+1+")" + surname + ";<br>";
+            }
+            document.write(output);
+        </script>
+        <br><br>
+        <script>
+            // Сформировать массив из 6 целых чисел
+            let array = [1, 2, 3, 4, 5, 6];
+            let utput = "";
+            let sum = 0;
+
+            utput = "[ "
+            for(let i = 0; i < array.length; i++){
+                utput += array[i] + "\n";
+            }
+            utput += "];   Сумма четных элементов = ";
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
+                    sum += array[i];
+                }
+            }
+            utput += sum;
+            document.write(utput);
+        </script>
+
+        <p>x = <input id="x"></p>
+        <p>a = <input id="a"></p>
+        <p><button onclick="formula()">Расчет по формуле</button></p>
+        <br><br>
+
+        <script>
+            var S1 = "Я люблю Беларусь";
+
+            var s2 = 'Я учусь в Политехническом колледже';
+            var substring = 'учусь';
+
+            var result = removeAllOccurrences(s2, substring);
+
+            document.write("Длина строки S1 = " + S1.length + "<br><br>");
+
+            let newStr = S1.replace(/ю/g, "*");
+
+            document.write(result);
+            document.write(S1);
+
+        </script>
+        <p><button onclick="openNewWindow()">Имя в сети</button></p>
+
+
+    </body>
+    <script src="javascript.js"></script>
+</html>
